@@ -1,0 +1,119 @@
+[Jumbo]
+NetworkId = 1009
+SyncMode = "full"
+DisablePeerTxBroadcast = false
+JumboDiscoveryURLs = []
+SnapDiscoveryURLs = []
+TrustDiscoveryURLs = []
+CbsDiscoveryURLs = []
+NoPruning = false
+NoPrefetch = false
+DirectBroadcast = false
+DisableSnapProtocol = false
+EnableTrustProtocol = false
+PipeCommit = false
+RangeLimit = false
+TxLookupLimit = 23500
+LightPeers = 300
+DatabaseCache = 512
+DatabaseFreezer = ""
+DatabaseDiff = ""
+PersistDiff = false
+DiffBlock = 43200
+PruneAncientData = false
+TrieCleanCache = 256
+TrieDirtyCache = 512
+TrieTimeout = 3600000000000
+SnapshotCache = 102
+TriesInMemory = 128
+TriesVerifyMode = "local"
+Preimages = false
+FilterLogCacheSize = 32
+EnablePreimageRecording = false
+RPCGasCap = 500000
+RPCEVMTimeout = 5000000000
+RPCTxFeeCap = 1e+00
+
+[Jumbo.Miner]
+DelayLeftOver = 50
+GasFloor = 0
+GasCeil = 30000000
+GasPrice = 1000000000
+Recommit = 3000000000
+VoteEnable = false
+NewPayloadTimeout = 2000000000
+DisableVoteAttestation = false
+ParallelBlockProcess = 10
+
+[Jumbo.TxPool]
+Locals = []
+NoLocals = false
+Journal = "transactions.rlp"
+Rejournal = 3600000000000
+PriceLimit = 1
+PriceBump = 10
+AccountSlots = 16
+GlobalSlots = 5120
+AccountQueue = 64
+GlobalQueue = 1024
+Lifetime = 10800000000000
+ReannounceTime = 315360000000000000
+
+[Jumbo.BlobPool]
+Datadir = "blobpool"
+Datacap = 10737418240
+PriceBump = 100
+
+[Jumbo.GPO]
+Blocks = 20
+Percentile = 60
+MaxHeaderHistory = 0
+MaxBlockHistory = 0
+MaxPrice = 100000000000
+IgnorePrice = 4
+OracleThreshold = 1000
+
+[Node]
+DataDir = "/data/jumbo/node"
+InsecureUnlockAllowed = false
+IPCPath = "jumbo.ipc"
+HTTPHost = "0.0.0.0"
+HTTPPort = 8545
+HTTPVirtualHosts = ["*"]
+HTTPModules = ["admin","personal","debug", "net", "web3", "txpool", "jumbo"]
+AuthAddr = "localhost"
+AuthPort = 8551
+AuthVirtualHosts = ["localhost"]
+WSHost = ""
+WSPort = 8546
+WSModules = ["net", "web3", "jumbo"]
+GraphQLVirtualHosts = ["localhost"]
+BLSWalletDir = "/data/jumbo/node/bls/wallet"
+VoteJournalDir = "/data/jumbo/node/voteJournal"
+BatchRequestLimit = 1000
+BatchResponseMaxSize = 25000000
+
+[Node.P2P]
+MaxPeers = 50
+MaxPeersPerIP = 50
+NoDiscovery = false
+DiscoveryV4 = true
+BootstrapNodes = []
+StaticNodes = ["enode://ba04c003e55bc640b2d35f79fa5c4b14931f31a68299b0dd8c2a3d23aa3286fa823345a7cf1c7fab2fb5f2b6842d0f14b04c99944df025c1e92df92d91649656@4.240.79.125:30301","enode://3601dcd54560d5eb84b11ac97e577ee3c822b5e404852310547ef2c681fbecd819e35dcb0fdc09f6effe9b46b8a2cb68be98324435cb50e9727d588551df03cf@4.240.75.133:30301","enode://87838ea7e20b01a978eb673faf4d6cd8f614aea705ee36921533b4b884bd57ce2d9f645c4fc00b081ed1e4fabe5e1631add7a40641dbe95cfd2f41eae32c3d14@20.235.243.93:30301","enode://53b357117eea29659a83a57b8801ee96eed187ffdfa8ed07b2e26e97562d2bae8c999e0e389d1dff61737e31772df14cdd29d0be2a6e485b54b971cd23d3d5a6@20.244.107.181:30301","enode://dc407a8ea18917e69cd04cf5cb9830cbce8e04254a2b06a9b5b51e861897672520443d9daf2f96a6d33ea7c2b9fac4245dd8e6a3023ef581cd87817bf019b86f@20.244.106.43:30301","enode://a86d4872c40949500ac0fc4e07e674daac2feb17ab3e84cee9cf8dcd251def44251143ee8d33f75df4eb9a7d163a3ee052d4c589480476cdc6e8dedb4b5841d6@20.244.107.189:30301","enode://4ec0bcb3a984ca59f31db025716d30e14ee0cfd0ebd9459c32ef0e5ae1229ae3ead0bf87d7c561c87ac8c018833a3e43eb3d208b4a28571a84a22558604f0ce9@4.240.76.175:30301"]
+VerifyNodes = []
+TrustedNodes = ["enode://ba04c003e55bc640b2d35f79fa5c4b14931f31a68299b0dd8c2a3d23aa3286fa823345a7cf1c7fab2fb5f2b6842d0f14b04c99944df025c1e92df92d91649656@4.240.79.125:30301","enode://3601dcd54560d5eb84b11ac97e577ee3c822b5e404852310547ef2c681fbecd819e35dcb0fdc09f6effe9b46b8a2cb68be98324435cb50e9727d588551df03cf@4.240.75.133:30301","enode://87838ea7e20b01a978eb673faf4d6cd8f614aea705ee36921533b4b884bd57ce2d9f645c4fc00b081ed1e4fabe5e1631add7a40641dbe95cfd2f41eae32c3d14@20.235.243.93:30301","enode://53b357117eea29659a83a57b8801ee96eed187ffdfa8ed07b2e26e97562d2bae8c999e0e389d1dff61737e31772df14cdd29d0be2a6e485b54b971cd23d3d5a6@20.244.107.181:30301","enode://dc407a8ea18917e69cd04cf5cb9830cbce8e04254a2b06a9b5b51e861897672520443d9daf2f96a6d33ea7c2b9fac4245dd8e6a3023ef581cd87817bf019b86f@20.244.106.43:30301","enode://a86d4872c40949500ac0fc4e07e674daac2feb17ab3e84cee9cf8dcd251def44251143ee8d33f75df4eb9a7d163a3ee052d4c589480476cdc6e8dedb4b5841d6@20.244.107.189:30301","enode://4ec0bcb3a984ca59f31db025716d30e14ee0cfd0ebd9459c32ef0e5ae1229ae3ead0bf87d7c561c87ac8c018833a3e43eb3d208b4a28571a84a22558604f0ce9@4.240.76.175:30301"]
+ListenAddr = ":30301"
+DiscAddr = ""
+EnableMsgEvents = false
+
+[Node.HTTPTimeouts]
+ReadTimeout = 30000000000
+ReadHeaderTimeout = 30000000000
+WriteTimeout = 30000000000
+IdleTimeout = 120000000000
+
+[Node.LogConfig]
+FileRoot = ""
+FilePath = "jumbo.log"
+MaxBytesSize = 10485760
+Level = "info"
