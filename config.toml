@@ -43,7 +43,7 @@ Recommit = 3000000000
 VoteEnable = false
 NewPayloadTimeout = 2000000000
 DisableVoteAttestation = false
-ParallelBlockProcess = 10
+ParallelBlockProcess = 6
 
 [Jumbo.TxPool]
 Locals = []
