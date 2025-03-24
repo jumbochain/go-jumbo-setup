@@ -30,7 +30,7 @@ TriesVerifyMode = "local"
 Preimages = false
 FilterLogCacheSize = 32
 EnablePreimageRecording = false
-RPCGasCap = 500000
+RPCGasCap = 5000000
 RPCEVMTimeout = 5000000000
 RPCTxFeeCap = 1e+00
 
